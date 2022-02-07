@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comments</title>
+</head>
+<body>
+    <header>
+        <section id="post-comment">
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam, deleniti mollitia corrupti blanditiis, ex dolores ducimus ipsum voluptatem tempore dicta iusto libero porro consectetur, atque consequuntur ullam adipisci saepe reiciendis!</p>
+            <p>Ducimus laudantium expedita similique! Quisquam minima exercitationem veritatis tenetur ex totam, dignissimos minus quia vel quasi obcaecati corrupti nostrum. A, libero. Quae vero hic voluptatibus dolores rerum porro eum doloribus!</p>
+        </section>
+
+        <section>
+            <textarea id="comment" name="" id="" cols="50" rows="10"></textarea>
+            <button id="post">post</button>
+        </section>
+    </header>
+        
+
+    <script>
+        document.getElementById('post').addEventListener('click', function(e){
+
+            let comment = document.getElementById('comment').value;
+            let p = document.createElement('p');
+            const section = document.getElementById('post-comment');
+           // const textNode = document.createTextNode(comment);
+           p.innerText = comment;
+        // append comment 
+           section.appendChild(p);
+           
+           // clear comment 
+
+            document.getElementById('comment').value = '';
+        })
+    </script>
+</body>
+</html>

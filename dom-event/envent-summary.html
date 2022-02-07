@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event summary</title>
+</head>
+<body>
+    <p id="click-method"></p>
+    <button onclick="directFunction();">click direct function</button>
+    <button id="addEvent">click direct  add event listener</button>
+    <input type="text" id="name-filed">
+    <button id="update-name">update name</button>
+    <script>
+        function directFunction(){
+            document.getElementById('click-method').innerHTML = "<h2> direct function click </h2>";
+        }
+
+        document.getElementById('addEvent').addEventListener('click', function(){
+
+            document.getElementById('click-method').innerHTML = "<h3> Add event Listener </h3>";
+        })
+
+        document.getElementById('update-name').addEventListener('click', function(){
+
+           document.getElementById('click-method').innerText =  document.getElementById('name-filed').value;
+
+           document.getElementById('name-filed').value = '';
+        })
+    </script>
+</body>
+</html>
